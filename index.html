@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="Untitled-1cc.css">
+            <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+            <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,700" rel="stylesheet">
+        <title>My Project</title>
+        <style>
+            body{
+                min-height: 100vh;
+                background-image: linear-gradient(to left, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(./img/pexels-lukas-šakys-6678614.jpg);
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                margin-bottom: 20px;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+            video{
+                margin-left: 20px;
+                margin-right: 20px;
+                 border: 0.2cm solid white; 
+                 float: right;
+                 width: 50%;
+                 height: auto;
+                 box-shadow: 0 0 40px -10px #000
+                 
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navbar">
+        <ul>
+            <li><a class= "active" href="index.html">Home</a></li>
+            <li><a  href="#Places">Places</a></li>
+           
+            <li><a href="Activities.html">Activities</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+
+        </ul>
+    </div><br><br><br><br><br>
+    
+        <h1 style="text-align: center; color: aliceblue; font-size: 400%; text-shadow: 2px 2px 10px black;"><b>Welcome To Madeira Island</b></h1><br>
+       
+        <br>
+        <section style="display: inline-flexbox;">
+            <h1 style="text-align:left; color: aliceblue; font-size: 300%; text-shadow: 2px 2px 10px black; margin-left: 90px;"> <b>About Madeira Island:</b></h2>
+                <video width="400" controls loop>
+                    <source src="img/pexels-kęstutis-paškevičius-11096532 (1080p).mp4" type="video/mp4">
+                    <source src="img/pexels-kęstutis-paškevičius-11096532 (1080p).ogg" type="video/ogg">
+                </video>
+        <p style="color: aliceblue; text-align: justify; margin-right: 130px; margin-left: 50px; text-shadow: 2px 2px 10px black; font-size: 25px;">
+             The Madeira Islands are a stunning archipelago in the middle of the Atlantic — a place of lush greenery and rugged mountains 1,000km from the European mainland.<br> where you can hike in the morning, surf in the afternoon, and finish your day in a fine restaurant where the breathtaking view is complemented by unforgettable Mediterranean or traditional Madeira cuisine.</p>
+    </section>
+        <br>
+        
+          <br>
+          <br>
+          <hr>
+          <h1 id="Places" style="text-align: center; color: aliceblue; font-size: 400%; text-shadow: 2px 2px 10px black;"><b> Click on the photo to know more!!!</b></h1><br>
+        <div class="w3-content w3-display-container">
+           <a href="north.html" target="_blank"><img class="mySlides" src="img/ponta-delgada-madeira-1.jpg" style="width: 100%; border: 10px solid whitesmoke; box-shadow: 0 0 40px -10px #000"></a> 
+            <a href="South.html" target="_blank"><img class="mySlides" src="img/promenade-de-câmara-de-lobos-2.jpg" style="width:100%; border: 10px solid whitesmoke;box-shadow: 0 0 40px -10px #000"></a>
+           <a href="east.html" target="_blank"> <img class="mySlides" src="img/machico_centrodacidade3.jpg" style="width: 100%; border: 10px solid whitesmoke;box-shadow: 0 0 40px -10px #000"></a>
+            <a href="west.html" target="_blank"><img class="mySlides" src="img/simonzino_praia_da-ponta_do_sol_1.jpg" style="width: 100%; border: 10px solid whitesmoke; box-shadow: 0 0 40px -10px #000"></a>
+          
+            <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+          </div>
+          
+          <script>
+          var slideIndex = 1;
+          showDivs(slideIndex);
+          
+          function plusDivs(n) {
+            showDivs(slideIndex += n);
+          }
+          
+          function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = x.length}
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";  
+            }
+            x[slideIndex-1].style.display = "block";  
+          }
+          </script>
+
+
+    </body>
+</html>
